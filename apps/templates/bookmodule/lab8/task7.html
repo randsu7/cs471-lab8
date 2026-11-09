@@ -1,0 +1,25 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block title %} Lab 8 Task 7 {% endblock title %}
+
+{% block stylesheets %}
+<link rel="stylesheet" href="{% static 'main.css' %}">
+{% endblock stylesheets %}
+
+{% block content %}
+    <h1>Number of Students in Each City</h1>
+    <table>
+        <tr>
+            <th>City</th>
+            <th>Number of students</th>
+        </tr>
+        {% for city in cities %}
+        <tr>
+            <td>{{ city.city }}</td>
+            <td>{{ city.student_count }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock content %}
