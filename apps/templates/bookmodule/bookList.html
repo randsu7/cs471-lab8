@@ -1,0 +1,12 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block title %} List of Books {% endblock title %}
+
+{% block content %}
+{% for obj in books %}
+    ID: {{obj.id}}, Title: {{obj.title}}
+    <hr>
+{% endfor %}
+{% endblock content %}
